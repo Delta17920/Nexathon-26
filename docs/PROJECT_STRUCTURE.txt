@@ -1,0 +1,143 @@
+# NEXATHON 2025 - Project Structure
+
+┌─────────────────────────────────────────────────────────────────┐
+│                         NEXATHON 2025                           │
+│                   Professional Project Structure                │
+└─────────────────────────────────────────────────────────────────┘
+
+📦 Nexathon-26/
+│
+├── �� app/                       [Next.js App Router]
+│   ├── layout.tsx               → Root layout with fonts & metadata
+│   ├── page.tsx                 → Homepage (imports all sections)
+│   └── globals.css              → Global styles & animations
+│
+├── 📂 components/                [All React Components]
+│   │
+│   ├── 📂 layout/               [Structural Components - 3 files]
+│   │   ├── navbar.tsx          → Navigation bar with scroll
+│   │   ├── footer.tsx          → Site footer
+│   │   └── theme-provider.tsx  → Theme context
+│   │
+│   ├── �� sections/             [Page Sections - 12 files]
+│   │   ├── hero-section.tsx    → Landing hero
+│   │   ├── about-section.tsx   → About event
+│   │   ├── schedule-section.tsx → Event schedule
+│   │   ├── timeline-section.tsx → Registration timeline
+│   │   ├── sponsors-section.tsx → Sponsor showcase
+│   │   ├── rewards-section.tsx  → Prize pool
+│   │   ├── register-section.tsx → Registration form
+│   │   ├── theme-section.tsx    → Hackathon themes
+│   │   ├── faq-section.tsx      → FAQ accordion
+│   │   ├── gallery-section.tsx  → Image gallery
+│   │   ├── contact-section.tsx  → Contact form
+│   │   └── parallax-section.tsx → Parallax effects
+│   │
+│   ├── 📂 features/             [Reusable Components - 7 files]
+│   │   ├── animated-counter.tsx    → Number animations
+│   │   ├── contact-cta.tsx         → Call-to-action
+│   │   ├── floating-particles.tsx  → Particle system
+│   │   ├── matrix-background.tsx   → Matrix effect
+│   │   ├── scroll-animation.tsx    → Scroll reveals
+│   │   ├── section-header.tsx      → Section headers
+│   │   └── tilt-card.tsx          → 3D tilt cards
+│   │
+│   └── 📂 ui/                   [Base UI - 2 files]
+│       ├── shader-animation.tsx → Three.js shaders
+│       └── timeline.tsx        → Timeline component
+│
+├── 📂 lib/                       [Utilities]
+│   └── utils.ts                 → Helper functions (cn, etc.)
+│
+├── 📂 public/                    [Static Assets]
+│   ├── *.jpg                   → Images
+│   ├── *.png                   → Icons
+│   └── *.svg                   → Vector graphics
+│
+├── 📂 .github/workflows/         [CI/CD]
+│   └── nextjs.yml              → GitHub Actions
+│
+├── 📂 workflows/                 [Additional Workflows]
+│   └── nextjs.yml
+│
+├── 📄 components.json            [shadcn/ui Configuration]
+├── 📄 next.config.mjs           [Next.js Configuration]
+├── 📄 tsconfig.json             [TypeScript Configuration]
+├── 📄 postcss.config.mjs        [PostCSS Configuration]
+├── 📄 package.json              [Dependencies & Scripts]
+├── 📄 pnpm-lock.yaml            [Lock file]
+│
+└── 📚 Documentation/
+    ├── README.md               → 📕 Main documentation
+    ├── ARCHITECTURE.md         → 📘 Technical architecture
+    ├── CONTRIBUTING.md         → 📗 Contribution guidelines
+    ├── HANDOVER.md            → 📙 Detailed component docs
+    ├── QUICK_REFERENCE.md     → 📓 Quick reference guide
+    └── RESTRUCTURING_SUMMARY.md → 📔 This restructure summary
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      Component Flow                             │
+└─────────────────────────────────────────────────────────────────┘
+
+app/page.tsx
+    │
+    ├──> layout/navbar.tsx
+    │
+    ├──> features/matrix-background.tsx
+    │
+    ├──> sections/hero-section.tsx
+    │    ├──> features/floating-particles.tsx
+    │    └──> ui/shader-animation.tsx
+    │
+    ├──> sections/about-section.tsx
+    │    ├──> features/section-header.tsx
+    │    ├──> features/scroll-animation.tsx
+    │    ├──> features/tilt-card.tsx
+    │    ├──> features/animated-counter.tsx
+    │    └──> features/contact-cta.tsx
+    │
+    ├──> sections/[other sections]...
+    │    └──> [similar feature imports]
+    │
+    └──> layout/footer.tsx
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      Import Patterns                            │
+└─────────────────────────────────────────────────────────────────┘
+
+✅ Correct Import Patterns:
+   import Navbar from "@/components/layout/navbar"
+   import HeroSection from "@/components/sections/hero-section"
+   import TiltCard from "@/components/features/tilt-card"
+   import { Timeline } from "@/components/ui/timeline"
+
+❌ Old Patterns (No Longer Used):
+   import Navbar from "@/components/navbar"
+   import HeroSection from "./hero-section"
+
+┌─────────────────────────────────────────────────────────────────┐
+│                     File Count Summary                          │
+└─────────────────────────────────────────────────────────────────┘
+
+Total Component Files: 24
+  ├── Layout Components:    3
+  ├── Section Components:  12
+  ├── Feature Components:   7
+  └── UI Components:        2
+
+Documentation Files: 6
+  ├── README.md
+  ├── ARCHITECTURE.md
+  ├── CONTRIBUTING.md
+  ├── HANDOVER.md
+  ├── QUICK_REFERENCE.md
+  └── RESTRUCTURING_SUMMARY.md
+
+Configuration Files: 6
+  ├── components.json
+  ├── next.config.mjs
+  ├── tsconfig.json
+  ├── postcss.config.mjs
+  ├── package.json
+  └── pnpm-lock.yaml
+
