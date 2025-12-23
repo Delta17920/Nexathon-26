@@ -2,6 +2,8 @@
 
 import Link from "next/link"
 import { Heart, ArrowUp, Terminal } from "lucide-react"
+import Image from "next/image"
+import { useLenis } from "@/components/providers/smooth-scroll-provider"
 
 const footerLinks = {
   quickLinks: [
@@ -23,6 +25,26 @@ const footerLinks = {
 }
 
 export default function Footer() {
+  const lenis = useLenis()
+
+  // Native fallback smooth scroll (easeInOutSine)
+  const smoothScrollToTop = (duration = 1200) => {
+    const start = window.scrollY || window.pageYOffset
+    const startTime = performance.now()
+
+    const easeInOutSine = (t: number) => 0.5 - Math.cos(Math.PI * t) / 2
+
+    function step(now: number) {
+      const elapsed = now - startTime
+      const progress = Math.min(1, elapsed / duration)
+      const eased = easeInOutSine(progress)
+      const y = Math.round(start * (1 - eased))
+      window.scrollTo(0, y)
+      if (progress < 1) requestAnimationFrame(step)
+    }
+
+    requestAnimationFrame(step)
+  }
   return (
     <footer className="relative bg-card border-t border-border">
       {/* Background effects */}
@@ -34,6 +56,18 @@ export default function Footer() {
       <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-50">
         <Link
           href="#"
+          onClick={(e) => {
+            e.preventDefault()
+            if ((lenis as any)?.scrollTo) {
+              try {
+                ;(lenis as any).scrollTo(0, { duration: 2.5, easing: (t: number) => 0.5 - Math.cos(Math.PI * t) / 2 })
+              } catch {
+                ;(lenis as any).scrollTo(0, { duration: 2.5 })
+              }
+            } else {
+              smoothScrollToTop(1200)
+            }
+          }}
           className="group w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,255,136,0.6)] hover:-translate-y-2 hover:scale-110"
           aria-label="Back to top"
         >
@@ -62,13 +96,13 @@ export default function Footer() {
                 className="w-12 h-12 border border-dashed border-primary/30 rounded-lg flex items-center justify-center hover:border-primary/60 transition-all duration-300 float"
                 style={{ animationDelay: "0s" }}
               >
-                <span className="text-xs text-muted-foreground">Logo</span>
+                <Image src="/logo.png" alt="Logo" width={64} height={64} className="w-16 h-16 object-contain" />
               </div>
               <div
                 className="w-12 h-12 border border-dashed border-primary/30 rounded-lg flex items-center justify-center hover:border-primary/60 transition-all duration-300 float"
                 style={{ animationDelay: "1s" }}
               >
-                <span className="text-xs text-muted-foreground">College</span>
+                <Image src="/VIT_COLOURED.png" alt="College Logo" width={64} height={64} className="w-16 h-16 object-contain" />
               </div>
             </div>
           </div>

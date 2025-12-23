@@ -15,7 +15,7 @@ import MatrixBackground from "@/components/features/matrix-background"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-background overflow-x-hidden noise-overlay scanlines">
+    <main className="relative min-h-screen bg-background noise-overlay scanlines">
       <MatrixBackground />
       <div className="relative z-10">
         <Navbar />
