@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Calendar, MapPin, Users, Terminal, Sparkles } from "lucide-react"
 import Link from "next/link"
+import { useLenis } from "@/components/providers/smooth-scroll-provider"
 import FloatingParticles from "@/components/features/floating-particles"
 import { ShaderAnimation } from "@/components/ui/shader-animation"
 import { heroData, eventInfo } from "@/lib/data"
@@ -11,6 +12,7 @@ export default function HeroSection() {
   const [mounted, setMounted] = useState(false)
   const [currentText, setCurrentText] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const lenis = useLenis()
 
   useEffect(() => {
     setMounted(true)
@@ -196,6 +198,10 @@ export default function HeroSection() {
         >
           <Link
             href="#about"
+            onClick={(e) => {
+              e.preventDefault()
+              lenis?.scrollTo("#about", { duration: 1.2 })
+            }}
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 group"
           >
             <span className="font-[var(--font-space)] text-xs tracking-widest uppercase">Scroll to explore</span>

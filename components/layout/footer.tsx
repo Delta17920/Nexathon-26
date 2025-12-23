@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Heart, ArrowUp, Terminal } from "lucide-react"
+import { useLenis } from "@/components/providers/smooth-scroll-provider"
 
 const footerLinks = {
   quickLinks: [
@@ -23,6 +24,7 @@ const footerLinks = {
 }
 
 export default function Footer() {
+  const lenis = useLenis()
   return (
     <footer className="relative bg-card border-t border-border">
       {/* Background effects */}
@@ -34,6 +36,10 @@ export default function Footer() {
       <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-50">
         <Link
           href="#"
+          onClick={(e) => {
+            e.preventDefault()
+            lenis?.scrollTo(0, { duration: 1.5 })
+          }}
           className="group w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,255,136,0.6)] hover:-translate-y-2 hover:scale-110"
           aria-label="Back to top"
         >
