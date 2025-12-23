@@ -8,46 +8,37 @@ import TiltCard from "@/components/features/tilt-card"
 
 const scheduleData = [
   {
-    day: "Day 1 - March 15",
+    day: "Hackathon Day - March 8",
     events: [
-      { time: "08:00 AM", title: "Registration & Check-in", icon: Calendar, description: "Get your badges and swag" },
+      { time: "09:00 AM", title: "Registration & Check-in", icon: Calendar, description: "Get your badges and swag" },
       { time: "10:00 AM", title: "Opening Ceremony", icon: Presentation, description: "Keynote & rules announcement" },
       { time: "11:00 AM", title: "Hacking Begins!", icon: Code, description: "Start building your projects" },
       { time: "01:00 PM", title: "Lunch Break", icon: Coffee, description: "Networking lunch" },
-      { time: "04:00 PM", title: "Workshop 1: AI/ML", icon: Presentation, description: "Hands-on AI workshop" },
-      { time: "08:00 PM", title: "Dinner", icon: Coffee, description: "Evening refreshments" },
+      { time: "03:00 PM", title: "Workshop 1: Tech Stack Deep Dive", icon: Presentation, description: "Hands-on workshop" },
+      { time: "07:00 PM", title: "Dinner", icon: Coffee, description: "Evening refreshments" },
+      { time: "10:00 PM", title: "Midnight Snacks", icon: Coffee, description: "Late night coding fuel" },
+      { time: "02:00 AM", title: "Night Owl Check-in", icon: Code, description: "Progress updates" },
     ],
   },
   {
-    day: "Day 2 - March 16",
+    day: "Finale - March 9",
     events: [
-      { time: "08:00 AM", title: "Breakfast", icon: Coffee, description: "Fuel up for the day" },
-      { time: "10:00 AM", title: "Workshop 2: Web3", icon: Presentation, description: "Blockchain fundamentals" },
-      { time: "01:00 PM", title: "Lunch & Mentoring", icon: Coffee, description: "Meet the mentors" },
-      { time: "06:00 PM", title: "Progress Check", icon: Code, description: "Mid-hackathon updates" },
-      { time: "08:00 PM", title: "Dinner & Fun", icon: Coffee, description: "Games and networking" },
-      { time: "11:00 PM", title: "Midnight Snacks", icon: Coffee, description: "Late night coding fuel" },
-    ],
-  },
-  {
-    day: "Day 3 - March 17",
-    events: [
-      { time: "08:00 AM", title: "Final Sprint", icon: Code, description: "Last push for completion" },
-      { time: "11:00 AM", title: "Submissions Close", icon: Calendar, description: "Submit your projects" },
-      { time: "12:00 PM", title: "Lunch", icon: Coffee, description: "Relax before presentations" },
-      { time: "02:00 PM", title: "Project Demos", icon: Presentation, description: "Show what you built" },
-      { time: "05:00 PM", title: "Judging", icon: Award, description: "Evaluation by experts" },
-      { time: "07:00 PM", title: "Closing Ceremony", icon: Award, description: "Winners announcement" },
+      { time: "07:00 AM", title: "Sunrise Breakfast", icon: Coffee, description: "Fuel up for the final stretch" },
+      { time: "10:00 AM", title: "Hacking Ends", icon: Code, description: "Final code submission" },
+      { time: "10:30 AM", title: "Project Demos", icon: Presentation, description: "Show what you built" },
+      { time: "12:30 PM", title: "Lunch & Judging", icon: Coffee, description: "Enjoy lunch while judges deliberate" },
+      { time: "02:30 PM", title: "Final Presentations", icon: Presentation, description: "Top projects present" },
+      { time: "04:00 PM", title: "Closing Ceremony", icon: Award, description: "Winners announcement" },
     ],
   },
 ]
 
 const venueInfo = {
-  name: "Tech Innovation Center",
-  address: "123 Technology Park, Silicon Valley",
-  city: "Bangalore, Karnataka 560001",
-  date: "March 15-17, 2025",
-  time: "8:00 AM onwards",
+  name: "Vellore Institute of Technology",
+  address: "Kelambakkam - Vandalur Road, Rajan Nagar",
+  city: "Chennai, Tamil Nadu 600127",
+  date: "First week of March 2026",
+  time: "10:00 AM onwards",
 }
 
 export default function ScheduleSection() {
@@ -56,7 +47,7 @@ export default function ScheduleSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Event Schedule"
-          subtitle="36 hours of non-stop innovation, learning, and creation"
+          subtitle="24 hours of non-stop innovation, learning, and creation"
           highlight="// SCHEDULE"
         />
 

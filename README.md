@@ -1,8 +1,8 @@
-# 🚀 NEXATHON 2025 - Hackathon Landing Page
+# 🚀 NEXATHON 2026 - Hackathon Landing Page
 
 <div align="center">
 
-![NEXATHON 2025](https://img.shields.io/badge/NEXATHON-2025-00ff88?style=for-the-badge)
+![NEXATHON 2026](https://img.shields.io/badge/NEXATHON-2026-00ff88?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)
@@ -31,7 +31,7 @@
 
 ## 🎯 Overview
 
-NEXATHON 2025 is a cutting-edge, single-page application (SPA) designed for a 36-hour hackathon event. The website features a **dark tech-themed design** with cyberpunk aesthetics, smooth animations, and 3D effects throughout. Built with modern web technologies, it provides an immersive experience for participants, sponsors, and visitors.
+NEXATHON 2026 is a cutting-edge, single-page application (SPA) designed for a 24-hour hackathon event. The website features a **dark tech-themed design** with cyberpunk aesthetics, smooth animations, and 3D effects throughout. Built with modern web technologies, it provides an immersive experience for participants, sponsors, and visitors.
 
 ### Key Highlights
 
@@ -358,7 +358,7 @@ We welcome contributions! Please see our [Contributing Guidelines](./docs/CONTRI
 
 ## 📝 License
 
-This project is created for NEXATHON 2025. All rights reserved.
+This project is created for NEXATHON 2026. All rights reserved.
 
 ---
 
@@ -383,8 +383,8 @@ This project is created for NEXATHON 2025. All rights reserved.
 
 <div align="center">
 
-**Made with ❤️ for NEXATHON 2025**
+**Made with ❤️ for NEXATHON 2026**
 
-[⬆ Back to Top](#-nexathon-2025---hackathon-landing-page)
+[⬆ Back to Top](#-nexathon-2026---hackathon-landing-page)
 
 </div>

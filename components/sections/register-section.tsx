@@ -49,7 +49,7 @@ export default function RegisterSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <SectionHeader
           title="Register Now"
-          subtitle="Secure your spot at NEXATHON 2025 and start your innovation journey"
+          subtitle="Secure your spot at NEXATHON 2026 and start your innovation journey"
           highlight="// REGISTER"
         />
 

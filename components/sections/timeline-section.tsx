@@ -112,7 +112,7 @@ const timelineData = [
           <h4 className="text-xl font-bold text-foreground font-[var(--font-rajdhani)]">Registration Closes</h4>
         </div>
         <p className="text-muted-foreground text-sm md:text-base mb-6 font-[var(--font-sans)]">
-          Last day to register your team for NEXATHON 2025. No late registrations will be accepted after this date.
+          Last day to register your team for NEXATHON 2026. No late registrations will be accepted after this date.
         </p>
         <div className="p-4 bg-destructive/10 border border-destructive/30 rounded-xl">
           <p className="text-sm text-destructive font-[var(--font-rajdhani)] font-semibold">Important Notice</p>
@@ -157,14 +157,14 @@ const timelineData = [
           <div className="p-2 bg-gradient-to-r from-primary to-secondary rounded-lg">
             <Trophy className="w-5 h-5 text-background" />
           </div>
-          <h4 className="text-xl font-bold text-foreground font-[var(--font-rajdhani)]">NEXATHON 2025</h4>
+          <h4 className="text-xl font-bold text-foreground font-[var(--font-rajdhani)]">NEXATHON 2026</h4>
         </div>
         <p className="text-muted-foreground text-sm md:text-base mb-6 font-[var(--font-sans)]">
-          36 hours of hacking, building, and innovating! The main event where dreams become reality.
+          24 hours of hacking, building, and innovating! The main event where dreams become reality.
         </p>
         <div className="grid grid-cols-2 gap-4">
           <div className="p-4 bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 rounded-xl shadow-[0_0_30px_oklch(0.78_0.22_145/0.1)]">
-            <p className="text-2xl font-bold text-primary font-[var(--font-orbitron)]">36</p>
+            <p className="text-2xl font-bold text-primary font-[var(--font-orbitron)]">24</p>
             <p className="text-xs text-muted-foreground">Hours of Hacking</p>
           </div>
           <div className="p-4 bg-gradient-to-br from-secondary/20 to-transparent border border-secondary/30 rounded-xl shadow-[0_0_30px_oklch(0.78_0.18_195/0.1)]">
@@ -204,7 +204,7 @@ export default function TimelineSection() {
   const [countdown, setCountdown] = useState({ days: "84", hours: "12", minutes: "45", seconds: "30" })
 
   useEffect(() => {
-    const targetDate = new Date("2025-03-10T00:00:00").getTime()
+    const targetDate = new Date("2026-02-07T23:59:59").getTime()
 
     const updateCountdown = () => {
       const now = new Date().getTime()

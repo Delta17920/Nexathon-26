@@ -68,7 +68,7 @@ export default function AboutSection() {
                   <div className="h-full bg-card/60 backdrop-blur-sm rounded-xl border border-border flex items-center justify-center overflow-hidden">
                     <div className="text-center p-6 relative z-10">
                       <AnimatedCounter
-                        end={36}
+                        end={24}
                         className="font-[var(--font-orbitron)] text-7xl md:text-8xl font-bold text-gradient-animated"
                       />
                       <div className="font-[var(--font-rajdhani)] text-xl text-muted-foreground tracking-wide mt-2">

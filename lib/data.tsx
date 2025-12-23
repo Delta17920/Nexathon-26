@@ -47,13 +47,13 @@ import {
 export const eventInfo = {
   name: "NEXATHON 2026",
   tagline: "Build. Innovate. Transform.",
-  shortDescription: "The ultimate 36-hour coding marathon",
+  shortDescription: "24-hour coding marathon at VIT CHENNAI",
   longDescription:
-    "NEXATHON is not just a hackathon—it's a movement. We bring together the brightest minds from across the nation to solve real-world problems through technology and innovation.",
-  date: "March 15-17, 2026",
-  duration: "36 Hours",
-  venue: "Tech Innovation Center, Bangalore",
-  venueShort: "TIC Bangalore",
+    "NEXATHON is not just a hackathon—it's a movement. We bring together the brightest minds from across the nation to solve real-world problems through technology and innovation at VIT CHENNAI.",
+  date: "First week of March, 2026",
+  duration: "24 Hours",
+  venue: "VIT CHENNAI",
+  venueShort: "VIT CHENNAI",
   participantCount: 500,
   mentorCount: 50,
   prizePool: "₹5,00,000",
@@ -107,7 +107,7 @@ export const aboutData = {
   features: [
     {
       icon: Code,
-      title: "36 Hours of Coding",
+      title: "24 Hours of Coding",
       description: "Non-stop coding marathon to build innovative solutions",
     },
     {
@@ -139,7 +139,7 @@ export const aboutData = {
   stats: [
     { value: 500, suffix: "+", label: "Participants" },
     { value: 50, suffix: "+", label: "Mentors" },
-    { value: 36, suffix: "", label: "Hours" },
+    { value: 24, suffix: "", label: "Hours" },
   ],
 }
 
@@ -149,7 +149,7 @@ export const aboutData = {
 
 export const scheduleData = {
   title: "Event Schedule",
-  subtitle: "36 hours of non-stop innovation, learning, and collaboration",
+  subtitle: "24 hours of non-stop innovation, learning, and collaboration",
   highlight: "// SCHEDULE",
   days: [
     {
@@ -588,7 +588,7 @@ export const contactData = {
     line2: "Koramangala, Bangalore",
     line3: "Karnataka 560095, India",
   },
-  email: "hello@nexathon.com",
+  email: "nexusvitc@gmail.com",
   phone: "+91 98765 43210",
   social: {
     twitter: "https://twitter.com/nexathon",

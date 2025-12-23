@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send, MessageSquare, Instagram, Twitter, Linkedin, Github, Sparkles } from "lucide-react"
+import { Mail, Phone, MapPin, Send, MessageSquare, Instagram, Linkedin, Globe } from "lucide-react"
 import SectionHeader from "@/components/features/section-header"
 import ScrollAnimation from "@/components/features/scroll-animation"
 import TiltCard from "@/components/features/tilt-card"
@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "hello@nexathon.tech",
-    link: "mailto:hello@nexathon.tech",
+    value: "nexusvitc@gmail.com",
+    link: "mailto:nexusvitc@gmail.com",
   },
   {
     icon: Phone,
@@ -23,16 +23,27 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    value: "Tech Campus, Bangalore",
+    value: "Vellore Institute of Technology, Chennai",
     link: "#",
   },
 ]
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
+  { 
+    icon: Instagram, 
+    href: "https://www.instagram.com/nexus_vitc/", 
+    label: "Instagram" 
+  },
+  { 
+    icon: Linkedin, 
+    href: "https://www.linkedin.com/company/nexusvitchennai/posts/?feedView=all", 
+    label: "LinkedIn" 
+  },
+  { 
+    icon: Globe, 
+    href: "https://nexusvitc.in/", 
+    label: "Website" 
+  },
 ]
 
 export default function ContactSection() {
@@ -104,6 +115,8 @@ export default function ContactSection() {
                     <a
                       key={social.label}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 group hover:scale-110 hover:-translate-y-1 hover:shadow-[0_0_20px_oklch(0.78_0.22_145/0.3)]"
                       aria-label={social.label}
                       style={{ animationDelay: `${index * 0.1}s` }}
@@ -211,7 +224,7 @@ export default function ContactSection() {
                 >
                   <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   Send Message
-                  <Sparkles className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Send className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </button>
               </form>
             </TiltCard>

@@ -172,25 +172,19 @@ export default function HeroSection() {
 
         {/* CTA Buttons with 3D effects */}
         <div
-          className={`flex flex-col sm:flex-row gap-4 justify-center mb-40 transition-all duration-1000 delay-600 ${
+          className={`mb-40 transition-all duration-1000 delay-600 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <Link
             href={heroData.cta.primary.link}
-            className="group relative px-10 py-4 bg-primary text-primary-foreground font-[var(--font-orbitron)] font-bold rounded-xl text-lg overflow-hidden transition-all duration-500 hover:scale-110 hover:-translate-y-2 shimmer perspective-1000 shadow-[0_10px_40px_oklch(0.65_0.25_250/0.3)] hover:shadow-[0_20px_60px_oklch(0.65_0.25_250/0.5)]"
+            className="group relative px-10 py-4 bg-primary text-primary-foreground font-[var(--font-orbitron)] font-bold rounded-xl text-lg overflow-hidden transition-all duration-500 hover:scale-110 hover:-translate-y-2 shimmer perspective-1000 shadow-[0_10px_40px_oklch(0.65_0.25_250/0.3)] hover:shadow-[0_20px_60px_oklch(0.65_0.25_250/0.5)] inline-flex items-center justify-center"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               {heroData.cta.primary.text}
               <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-[gradient-shift_3s_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </Link>
-          <Link
-            href={heroData.cta.secondary.link}
-            className="group px-10 py-4 border-2 border-primary/50 text-primary font-[var(--font-orbitron)] font-bold rounded-xl text-lg hover:bg-primary/10 hover:border-primary transition-all duration-500 hover:shadow-[0_0_30px_oklch(0.65_0.25_250/0.3)] hover:scale-110 hover:-translate-y-2"
-          >
-            {heroData.cta.secondary.text}
           </Link>
         </div>
 

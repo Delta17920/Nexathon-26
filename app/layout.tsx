@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Orbitron, Rajdhani, Plus_Jakarta_Sans, JetBrains_Mono, Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/layout/theme-provider"
+import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider"
 import "./globals.css"
 
 const orbitron = Orbitron({
@@ -81,7 +82,9 @@ export default function RootLayout({
         className={`${orbitron.variable} ${rajdhani.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
+          <SmoothScrollProvider>
+            {children}
+          </SmoothScrollProvider>
         </ThemeProvider>
         <Analytics />
       </body>
